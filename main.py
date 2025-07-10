@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import PlainTextResponse
-
 import requests
 import os
 
@@ -13,10 +12,10 @@ VERIFY_TOKEN = "visao_cria"
 
 @app.get("/webhook")
 async def verify(request: Request):
-    params = dict(request.query_params)
-    if params.get("hub.mode") == "subscribe" and params.get("hub.verify_token") == VERIFY_TOKEN:
-        return PlainTextResponse(content=params.get("hub.challenge"), status_code=200)
-    return PlainTextResponse(content="Erro de verificação", status_code=403)
+    params = dict(request.query_params)
+    if params.get("hub.mode") == "subscribe" and params.get("hub.verify_token") == VERIFY_TOKEN:
+        return PlainTextResponse(content=params.get("hub.challenge"), status_code=200)
+    return PlainTextResponse(content="Erro de verificação", status_code=403)
 
 @app.post("/webhook")
 async def receive_message(request: Request):
