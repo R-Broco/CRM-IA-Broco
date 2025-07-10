@@ -11,7 +11,7 @@ WHATSAPP_PHONE_ID = os.getenv("WHATSAPP_PHONE_ID")
 LANGFLOW_ENDPOINT = os.getenv("LANGFLOW_ENDPOINT")
 VERIFY_TOKEN = "visao_cria"  
 
-VERIFY_TOKEN = "meu_token_secreto"  # <-- use o mesmo que você colocar no Meta
+VERIFY_TOKEN = "visao_cria"  # <-- Mesmo do Meta
 
 @app.get("/webhook")
 async def verify(request: Request):
