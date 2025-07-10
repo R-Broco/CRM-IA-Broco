@@ -9,9 +9,7 @@ app = FastAPI()
 WHATSAPP_TOKEN = os.getenv("WHATSAPP_TOKEN")
 WHATSAPP_PHONE_ID = os.getenv("WHATSAPP_PHONE_ID")
 LANGFLOW_ENDPOINT = os.getenv("LANGFLOW_ENDPOINT")
-VERIFY_TOKEN = "visao_cria"  
-
-VERIFY_TOKEN = "visao_cria"  # <-- Mesmo do Meta
+VERIFY_TOKEN = "visao_cria"
 
 @app.get("/webhook")
 async def verify(request: Request):
