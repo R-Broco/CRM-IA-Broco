@@ -1,0 +1,7 @@
+flask
+twilio
+gspread
+oauth2client
+apscheduler
+requests
+python-dotenv
